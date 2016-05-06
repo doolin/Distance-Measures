@@ -1,4 +1,4 @@
-# 
+#
 # Notes:
 #
 # translated into Ruby based on information contained in:
@@ -6,7 +6,7 @@
 #   http://www.movable-type.co.uk/scripts/latlong.html
 #   http://en.wikipedia.org/wiki/Haversine_formula
 #
-# This formula can compute accurate distances between two points given latitude and longitude, even for 
+# This formula can compute accurate distances between two points given latitude and longitude, even for
 # short distances.
 
 module DistanceMeasures
@@ -16,7 +16,7 @@ module DistanceMeasures
 
   R_MILES = 3956     # radius of the great circle in miles
   R_KM = 6371        # radius in kilometers...some algorithms use 6367
-  
+
   # the great circle distance d will be in whatever units R is in
   R = {
     :miles => R_MILES,
@@ -29,7 +29,7 @@ module DistanceMeasures
     dlon = other[1] - self[1]
     dlat = other[0] - self[0]
 
-    dlon_rad = dlon * RAD_PER_DEG 
+    dlon_rad = dlon * RAD_PER_DEG
     dlat_rad = dlat * RAD_PER_DEG
 
     lat1_rad = self[0] * RAD_PER_DEG
